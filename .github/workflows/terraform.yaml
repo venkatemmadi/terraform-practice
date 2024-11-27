@@ -18,8 +18,8 @@ jobs:
 
     - name: Terraform Initialize
       env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.venkat_id}}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.venkat_key }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_VENKAT_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID_VENKAT_ID }}
       run: terraform init
 
     - name: Terraform Validate
@@ -27,12 +27,12 @@ jobs:
 
     - name: Terraform Plan
       env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.venkat_id }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.venkat_key }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_VENKAT_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID_VENKAT_ID }}
       run: terraform plan
 
     - name: Terraform Apply
       env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.venkat_id }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.venkat_key }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID_VENKAT_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_ID_VENKAT_ID }}
       run: terraform apply -auto-approve
