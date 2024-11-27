@@ -4,5 +4,5 @@ provider "aws" {
   region = "us-west-1"
 }
 resource "aws_s3_bucket" "my_bucket" {
-  bucket  = "s3-bucket creation"
+  bucket  = "s3_bucket creation"
 }
